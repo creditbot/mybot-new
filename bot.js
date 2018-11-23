@@ -44,22 +44,22 @@ client.on('message', message => {
     const days = millis / 1000 / 60 / 60 / 24;
     let roles = client.guilds.get(message.guild.id).roles.map(r => r.name);
     var embed  = new Discord.RichEmbed()
-    .setAuthor("[ Dark Bot ]", " https://images-ext-2.discordapp.net/external/ahNXTY5REo9rE5-6oa5XGyzSrJis3qbk7eBUv1sEiYI/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/459725014237970492/558a210e07b9ae2504e427a4c7c6d297.png?width=455&height=455")
-    .addField("**[ Dark Prefix] :**","**[ + ]**" , true)
-    .addField("** [ Dark ID ] **", "**"+"459725014237970492"+"**",true)
-    .addField("** [ Dark ] **","** دراجون**")
-    .addField("**[ Bot Developer ]**","<@!202745501345382400> [<@!461766920400535552>]")
+    .setAuthor("[ Rqmi Bot ]", " https://images-ext-2.discordapp.net/external/ahNXTY5REo9rE5-6oa5XGyzSrJis3qbk7eBUv1sEiYI/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/459725014237970492/558a210e07b9ae2504e427a4c7c6d297.png?width=455&height=455")
+    .addField("**[ Rqmi Prefix] :**","**[ + ]**" , true)
+    .addField("** [ Rqmi ID ] **", "**"+"459725014237970492"+"**",true)
+    .addField("** [ Rqmi ] **","** رقمي**")
+    .addField("**[ Bot Developer ]**","<@!417232164845781012> [<@!417232164845781012>]")
     .addField("**[ Servers ]**" , "**"+`${client.guilds.size}`+" Server**",true)
     .addField("**[ Users ] **",`** ${client.users.size} User**`)
     .setThumbnail(" https://images-ext-2.discordapp.net/external/ahNXTY5REo9rE5-6oa5XGyzSrJis3qbk7eBUv1sEiYI/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/459725014237970492/558a210e07b9ae2504e427a4c7c6d297.png?width=455&height=455")
     .setColor("ffffff")
-    .setFooter(`+help to see all Dark commands `, ' https://images-ext-2.discordapp.net/external/ahNXTY5REo9rE5-6oa5XGyzSrJis3qbk7eBUv1sEiYI/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/459725014237970492/558a210e07b9ae2504e427a4c7c6d297.png?width=455&height=455')
+    .setFooter(`+help to see all Rqmi commands `, ' https://images-ext-2.discordapp.net/external/ahNXTY5REo9rE5-6oa5XGyzSrJis3qbk7eBUv1sEiYI/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/459725014237970492/558a210e07b9ae2504e427a4c7c6d297.png?width=455&height=455')
     message.channel.sendEmbed(embed)
     }
     });
 
 client.on("guildDelete", guild => {
-    console.log(` Dark Left From Server -- = ${guild.name} = -- , Server Owner -- = ${guild.owner.user.username} = --`)
+    console.log(` Rqmi Left From Server -- = ${guild.name} = -- , Server Owner -- = ${guild.owner.user.username} = --`)
    
 var g= guild.members.size
 var i= guild.iconURL
@@ -67,8 +67,8 @@ var i= guild.iconURL
 const embed = new Discord.RichEmbed()
   
                    .setColor("RANDOM")
-                .setFooter(` ©  Dark™ `)
-                .setTitle(" Dark Left Server !")
+                .setFooter(` ©  Rqmi™ `)
+                .setTitle(" Rqmi Left Server !")
                 .addField("**Guild Name:**", guild.name )
                  .addField("**Owner:**", guild.owner.user.username )
                  .addField("**Owner id:**", guild.owner.user.id )
@@ -79,7 +79,7 @@ client.channels.get("427613133826162698").send({ embed: embed });
 
 
 client.on("guildCreate", guild => {
-console.log(` Dark Added From Server -- = ${guild.name} = -- , Server Owner -- = ${guild.owner.user.username} = --`)
+console.log(` Rqmi Added From Server -- = ${guild.name} = -- , Server Owner -- = ${guild.owner.user.username} = --`)
 
 var g= guild.members.size
 var i= guild.iconURL
@@ -87,8 +87,8 @@ var i= guild.iconURL
 const embed = new Discord.RichEmbed()
   
                    .setColor("RANDOM")
-                .setFooter(` ©  Dark™ `)
-                .setTitle(" Dark Added To Server !")
+                .setFooter(` ©  Rqmi™ `)
+                .setTitle(" Rqmi Added To Server !")
                 .addField("**Guild Name:**", guild.name )
                  .addField("**Owner:**", guild.owner.user.username )
                  .addField("**MEMBER COUNT:**", g )
@@ -1132,7 +1132,7 @@ client.on('message', message => {
 
   var roleCreated = role.createdAt.toString().split(' ');
   const embed = new Discord.RichEmbed()
-  .setTitle("Dark")
+  .setTitle("Rqmi")
   .setAuthor( '', '' )
   .setColor(0xFF8DFD)
   .setDescription(``)
@@ -3003,7 +3003,7 @@ $move all
       if(!msg.member.hasPermission('ADMINISTRATOR')) return      msg.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
       if(!msg.guild.member(client.user).hasPermission("MANAGE_ROLES")) return msg.reply("**I Don't Have `MANAGE_ROLES` Permission**").then(msg => msg.delete(6000))
 
-    msg.guild.roles.filter(msg => isNaN(msg)).forEach(Dark => Dark.delete())
+    msg.guild.roles.filter(msg => isNaN(msg)).forEach(Rqmi => Rqmi.delete())
     }
     });
       
@@ -3047,7 +3047,7 @@ ${args}
         if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
       if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
         let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-        let copy = "Dark";
+        let copy = "Rqmi";
         let request = `Requested By ${message.author.username}`;
         if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
         msg.react('✅')
@@ -3917,7 +3917,7 @@ var prefix = "$";
         var args = message.content.split(" ").slice(1);
     if(message.content.startsWith(prefix + 'لو خيروك')) {
          var lo = new Discord.RichEmbed()
-     .setFooter(`©  Dark™ `)
+     .setFooter(`©  Rqmi™ `)
 .setImage(viper[Math.floor(Math.random() * viper.length)])
 message.channel.sendEmbed(lo);
     }
@@ -3947,7 +3947,7 @@ const secreT = [
     .setColor('RANDOM')
    
      .setThumbnail(message.author.avatarURL) 
-     .setFooter(`©  Dark™ `)
+     .setFooter(`©  Rqmi™ `)
    .addField('لعبه خواطر' ,
     `${secreT[Math.floor(Math.random() * secreT.length)]}`)
     message.channel.sendEmbed(embed);
@@ -3993,7 +3993,7 @@ client.on('message', message => {
  var embed = new Discord.RichEmbed()
  .setColor('RANDOM')
   .setThumbnail(message.author.avatarURL) 
-     .setFooter(`©  Dark™ `)
+     .setFooter(`©  Rqmi™ `)
 .addField('لعبه كت تويت' ,
  `${cuttweet[Math.floor(Math.random() * cuttweet.length)]}`)
  message.channel.sendEmbed(embed);
@@ -4009,7 +4009,7 @@ client.on('message', message => {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor(0xd3d0c4)
-     .setFooter(`©  Dark™ `)
+     .setFooter(`©  Rqmi™ `)
    .setThumbnail(message.author.avatarURL) 
  .addField('حب' ,
   `${Love[Math.floor(Math.random() * Love.length)]}`)
@@ -4024,7 +4024,7 @@ var prefix = "$";
         var args = message.content.split(" ").slice(1);
     if(message.content.startsWith(prefix + 'animal')) {
          var cat = new Discord.RichEmbed()
-     .setFooter(`©  Dark™ `)
+     .setFooter(`©  Rqmi™ `)
 .setImage(cats[Math.floor(Math.random() * cats.length)])
 message.channel.sendEmbed(cat);
     }
@@ -4097,7 +4097,7 @@ if (message.content.startsWith('$صراحه')) {
  var client= new Discord.RichEmbed()
  .setTitle("لعبة صراحة ..")
  .setColor('RANDOM')
-     .setFooter(`©  Dark™ `)
+     .setFooter(`©  Rqmi™ `)
  .setDescription(`${Sra7a[Math.floor(Math.random() * Sra7a.length)]}`)
  .setImage("https://cdn.discordapp.com/attachments/371269161470525444/384103927060234242/125.png")
                  .setTimestamp()
